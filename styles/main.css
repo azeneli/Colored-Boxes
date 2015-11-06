@@ -36,15 +36,22 @@
 
 .box {
 	width: 90%;
-	min-height: 550px;
-	background-color: #ccc;
+	min-height: 500px;
+	/*background-color: #ccc;*/
 	margin: 2% auto;
 }
 
 /**************   Box Grid   ***************/
 
 .box__container {
-	
+	width: 100%;
+}
+
+.box__container{
+	width: 10%;
+  	height: 100px;
+  	background-color: #444;
+  	float: left;
 }
 
 
