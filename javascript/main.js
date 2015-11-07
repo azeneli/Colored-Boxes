@@ -4,8 +4,6 @@
 
 
 	function randomColorGenerator(){
-
-
 		// generate rgb color number
 		var red = Math.floor(Math.random() * 256)
 		, green = Math.floor(Math.random() * 256)
@@ -22,6 +20,7 @@
 		console.log(hexRed, 'hexGreen');
 		console.log(hexRed, 'hexBlue');
 
+		// if random number generator returns a length of 1 then add 0 in front
 		if(hexRed.length === 1){
 			hexRed = '0' + hexRed;
 		}
@@ -34,19 +33,22 @@
 			hexBlue = '0' + hexBlue;
 		}
 
+		// contatinate var into a hex value 
 		var hexColor = '#' + hexRed + hexGreen + hexBlue;
 		return hexColor;
 
-}
+	}
 
+	var color = randomColorGenerator();
+	console.log(color);
 
-var color = randomColorGenerator();
-console.log(color);
+	$('.js-hover').on('mouseenter', function(){
+		$(this).css('background-color', randomColorGenerator() );
+		$(this).css('box-shadow', "0 0 8px #fff inset");
+	});	
 
-
-$('.js-hover').on('mouseenter', function(){
-	$(this).css('background-color', randomColorGenerator() );
-});	
-
+	$(".js-hover").on("mouseleave", function () {
+		$(this).css('box-shadow', "none");
+	});
 
 })();
