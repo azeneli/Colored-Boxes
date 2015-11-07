@@ -44,11 +44,11 @@
 
 	$('.js-hover').on('mouseenter', function(){
 		$(this).css('background-color', randomColorGenerator() );
-		$(this).css('box-shadow', "0 0 8px #fff inset");
+		$(this).css('box-shadow', '0 0 8px #fff inset');
 	});	
 
 	$(".js-hover").on("mouseleave", function () {
-		$(this).css('box-shadow', "none");
+		$(this).css('box-shadow', 'none');
 	});
 
 })();
